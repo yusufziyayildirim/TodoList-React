@@ -2,7 +2,7 @@ import { BsCheck, BsTrash, BsCheckLg } from 'react-icons/bs'
 import { FiEdit } from 'react-icons/fi'
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { completeTodo, deleteTodo } from '../redux/todoSlice';
+import { completeTodo, deleteTodo, editTodo} from '../redux/todoSlice';
 
 const TodoItem = ({ todo }) => {
 
@@ -22,6 +22,8 @@ const TodoItem = ({ todo }) => {
     const handleEdit = (e) => {
         e.preventDefault();
         setEditInput(false);
+        dispatch(editTodo({ id: todo.id , title : value}));
+
     };
 
     return (
@@ -32,12 +34,12 @@ const TodoItem = ({ todo }) => {
                         <BsCheck className='text-[#ffffff80]' />
                     }
                 </div>
-                <span onClick={editInput ? '' : handleComplete} className={`text-white font-semibold text-base cursor-pointer ${todo.completed ? 'line-through' : ''}`}>
+                <span onClick={editInput ? '' : handleComplete} className={`text-white font-semibold text-base cursor-pointer max-w-full ${todo.completed ? 'line-through' : ''}`}>
                     {editInput && (
                         <form onSubmit={handleEdit}>
                             <input autoFocus
                                 type="text"
-                                className='bg-transparent outline-none h-8'
+                                className='bg-transparent outline-none h-8 w-full'
                                 value={value}
                                 onChange={e => setValue(e.target.value)}
                             />

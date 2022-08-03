@@ -2,17 +2,17 @@ import { createSlice } from '@reduxjs/toolkit'
 
 const initialState = [
     {
-        id:1,
+        id: 1,
         title: 'todo1',
         completed: false
     },
     {
-        id:2,
+        id: 2,
         title: 'todo2',
         completed: true
     },
     {
-        id:3,
+        id: 3,
         title: 'todo3',
         completed: false
     }
@@ -32,10 +32,11 @@ export const todoSlice = createSlice({
             state.push(newTodo);
         },
         deleteTodo: (state, action) => {
-           return state.filter((todo) => todo.id !== action.payload.id )
+            return state.filter((todo) => todo.id !== action.payload.id)
         },
         editTodo: (state, action) => {
-            
+            const updated = state.find((todo) => todo.id === action.payload.id)
+            updated.title = action.payload.title
         },
         completeTodo: (state, action) => {
             const index = state.findIndex(
