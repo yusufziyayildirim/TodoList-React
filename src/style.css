@@ -408,6 +408,11 @@ video {
   height: auto;
 }
 
+.bg-app{
+  background-image: linear-gradient(62deg, rgba(1, 95, 183, 0.9732216701223994) 13%, rgba(255, 122, 151, 0.5) 4%), linear-gradient(44deg, rgba(0, 43, 99, 0.07922090238615942) 39%, rgba(242, 140, 143, 0.5) 18%), linear-gradient(118deg, rgba(84, 202, 242, 0.03152997265339608) 40%, rgba(247, 155, 187, 0.5) 54%), linear-gradient(58deg, rgba(90, 90, 237, 0.16144443572260592) 83%, rgba(249, 156, 142, 0.5) 23%);
+  background-blend-mode: normal, lighten, multiply, hard-light;
+}
+
 *, ::before, ::after {
   --tw-border-spacing-x: 0;
   --tw-border-spacing-y: 0;
@@ -557,8 +562,13 @@ video {
   height: 100vh;
 }
 
-.h-full {
-  height: 100%;
+.min-h-min {
+  min-height: -webkit-min-content;
+  min-height: min-content;
+}
+
+.w-\[620px\] {
+  width: 620px;
 }
 
 .flex-col {
@@ -571,4 +581,23 @@ video {
 
 .justify-center {
   justify-content: center;
+}
+
+.rounded-xl {
+  border-radius: 0.75rem;
+}
+
+.bg-\[\#10101d\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(16 16 29 / var(--tw-bg-opacity));
+}
+
+.px-6 {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+.py-8 {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
 }
