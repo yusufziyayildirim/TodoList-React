@@ -15,7 +15,6 @@ const TodoItem = ({ todo }) => {
     };
 
     const handleDelete = () => {
-        console.log(todo.id)
         dispatch(deleteTodo({ id: todo.id }));
     };
 
@@ -23,7 +22,6 @@ const TodoItem = ({ todo }) => {
         e.preventDefault();
         setEditInput(false);
         dispatch(editTodo({ id: todo.id , title : value}));
-
     };
 
     return (
@@ -34,26 +32,28 @@ const TodoItem = ({ todo }) => {
                         <BsCheck className='text-[#ffffff80]' />
                     }
                 </div>
-                <span onClick={editInput ? '' : handleComplete} className={`text-white font-semibold text-base cursor-pointer max-w-full ${todo.completed ? 'line-through' : ''}`}>
+                <div onClick={editInput ? '' : handleComplete} className={`text-white font-semibold text-base cursor-pointer w-[120px] sm:w-[360px] md:w-[460px] ${todo.completed ? 'line-through' : ''}`}>
                     {editInput && (
                         <form onSubmit={handleEdit}>
                             <input autoFocus
                                 type="text"
-                                className='bg-transparent outline-none h-8 w-full'
+                                className='bg-transparent text-white outline-none h-8 w-full'
                                 value={value}
                                 onChange={e => setValue(e.target.value)}
                             />
                         </form>
                     )}
                     {!editInput && (
-                        todo.title
+                        <span className='block w-full overflow-hidden'>
+                            {todo.title}
+                        </span>
                     )}
 
-                </span>
+                </div>
             </div>
             <div className='flex items-center gap-1'>
                 {editInput && (
-                    <BsCheckLg className='cursor-pointer text-white' onClick={e => setEditInput(false)} />
+                    <BsCheckLg className='cursor-pointer text-white' onClick={handleEdit} />
                 )}
                 {!editInput && (
                     <>

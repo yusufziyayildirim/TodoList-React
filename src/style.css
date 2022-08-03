@@ -570,6 +570,10 @@ video {
   margin-top: 1rem;
 }
 
+.block {
+  display: block;
+}
+
 .flex {
   display: flex;
 }
@@ -627,6 +631,78 @@ video {
   width: 680px;
 }
 
+.\!w-full {
+  width: 100% !important;
+}
+
+.w-\[\%40\] {
+  width: %40;
+}
+
+.w-\[\%100\] {
+  width: %100;
+}
+
+.w-\[320px\] {
+  width: 320px;
+}
+
+.w-\[520px\] {
+  width: 520px;
+}
+
+.w-\[420px\] {
+  width: 420px;
+}
+
+.w-\[4220px\] {
+  width: 4220px;
+}
+
+.w-\[220px\] {
+  width: 220px;
+}
+
+.w-\[280px\] {
+  width: 280px;
+}
+
+.w-\[20px\] {
+  width: 20px;
+}
+
+.w-\[275px\] {
+  width: 275px;
+}
+
+.w-\[278px\] {
+  width: 278px;
+}
+
+.w-\[460px\] {
+  width: 460px;
+}
+
+.w-\[360px\] {
+  width: 360px;
+}
+
+.w-\[160px\] {
+  width: 160px;
+}
+
+.w-\[10px\] {
+  width: 10px;
+}
+
+.w-\[60px\] {
+  width: 60px;
+}
+
+.w-\[120px\] {
+  width: 120px;
+}
+
 .max-w-full {
   max-width: 100%;
 }
@@ -661,6 +737,22 @@ video {
 
 .gap-1 {
   gap: 0.25rem;
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+.overflow-scroll {
+  overflow: scroll;
+}
+
+.overflow-x-clip {
+  overflow-x: clip;
+}
+
+.overflow-x-scroll {
+  overflow-x: scroll;
 }
 
 .rounded-xl {
@@ -705,6 +797,11 @@ video {
 .bg-\[\#191933\] {
   --tw-bg-opacity: 1;
   background-color: rgb(25 25 51 / var(--tw-bg-opacity));
+}
+
+.bg-white {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
 .p-3 {
@@ -782,6 +879,11 @@ video {
   color: rgb(220 38 38 / var(--tw-text-opacity));
 }
 
+.text-black {
+  --tw-text-opacity: 1;
+  color: rgb(0 0 0 / var(--tw-text-opacity));
+}
+
 .line-through {
   -webkit-text-decoration-line: line-through;
           text-decoration-line: line-through;
@@ -841,4 +943,38 @@ video {
 .group:hover .group-hover\:border-\[\#ee9ca7\] {
   --tw-border-opacity: 1;
   border-color: rgb(238 156 167 / var(--tw-border-opacity));
+}
+
+@media (min-width: 640px) {
+  .sm\:w-\[520px\] {
+    width: 520px;
+  }
+
+  .sm\:w-\[400px\] {
+    width: 400px;
+  }
+
+  .sm\:w-\[360px\] {
+    width: 360px;
+  }
+}
+
+@media (min-width: 768px) {
+  .md\:w-\[620px\] {
+    width: 620px;
+  }
+
+  .md\:w-\[520px\] {
+    width: 520px;
+  }
+
+  .md\:w-\[460px\] {
+    width: 460px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .lg\:w-\[620px\] {
+    width: 620px;
+  }
 }

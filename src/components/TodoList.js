@@ -6,12 +6,11 @@ const TodoList = () => {
 
     return (
         <div className="mt-4">
-            {console.log(todos)}
-              {todos &&
-                    todos.map(todo => (
-                        <TodoItem key={todo.id} todo={todo} />
-                    ))
-                }
+            {todos &&
+                todos.map(todo => (
+                    <TodoItem key={todo.id} todo={todo} />
+                ))
+            }
         </div>
     )
 }
