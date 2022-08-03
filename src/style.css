@@ -726,18 +726,9 @@ video {
   color: rgb(220 38 38 / var(--tw-text-opacity));
 }
 
-.underline {
-  -webkit-text-decoration-line: underline;
-          text-decoration-line: underline;
-}
-
 .line-through {
   -webkit-text-decoration-line: line-through;
           text-decoration-line: line-through;
-}
-
-.opacity-0 {
-  opacity: 0;
 }
 
 .outline-none {
@@ -770,6 +761,15 @@ video {
 }
 
 .hover\:border-\[\#ee9ca7\]:hover {
+  --tw-border-opacity: 1;
+  border-color: rgb(238 156 167 / var(--tw-border-opacity));
+}
+
+.group:hover .group-hover\:btn-shadow{
+  box-shadow: 0 0 9px 0 rgba(238, 156, 167,0.4);
+}
+
+.group:hover .group-hover\:border-\[\#ee9ca7\] {
   --tw-border-opacity: 1;
   border-color: rgb(238 156 167 / var(--tw-border-opacity));
 }

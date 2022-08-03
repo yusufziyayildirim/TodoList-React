@@ -38,7 +38,10 @@ export const todoSlice = createSlice({
             
         },
         completeTodo: (state, action) => {
-            
+            const index = state.findIndex(
+                (todo) => todo.id === action.payload.id
+            )
+            state[index].completed = action.payload.completed
         },
     },
 })
