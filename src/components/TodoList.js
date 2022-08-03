@@ -1,11 +1,11 @@
 import TodoItem from './TodoItem';
 
 const TodoList = () => {
-  return (
-    <div>
-        <TodoItem />
-    </div>
-  )
+    return (
+        <div className="mt-4">
+            <TodoItem />
+        </div>
+    )
 }
 
 export default TodoList
