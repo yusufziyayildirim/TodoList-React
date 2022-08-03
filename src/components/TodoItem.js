@@ -1,14 +1,19 @@
 import { BsCheck, BsTrash } from 'react-icons/bs'
 import { FiEdit } from 'react-icons/fi'
 import { useDispatch } from 'react-redux';
-import { completeTodo } from '../redux/todoSlice';
+import { completeTodo, deleteTodo } from '../redux/todoSlice';
 
 const TodoItem = ({ todo }) => {
 
     const dispatch = useDispatch();
+
     const handleComplete = () => {
-        console.log(todo.id)
 		dispatch(completeTodo({ id: todo.id, completed: !todo.completed }));
+	};
+
+    const handleDelete = () => {
+        console.log(todo.id)
+		dispatch(deleteTodo({ id: todo.id }));
 	};
 
     return (
@@ -25,7 +30,7 @@ const TodoItem = ({ todo }) => {
             </div>
             <div className='flex items-center gap-1'>
                 <FiEdit size={20} className="cursor-pointer text-blue-600 hover:scale-95 transition-all" />
-                <BsTrash size={20} className="cursor-pointer text-red-600 hover:scale-95 transition-all" />
+                <BsTrash onClick={handleDelete} size={20} className="cursor-pointer text-red-600 hover:scale-95 transition-all" />
             </div>
         </div >
     )
