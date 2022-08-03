@@ -24,7 +24,12 @@ export const todoSlice = createSlice({
     initialState,
     reducers: {
         addTodo: (state, action) => {
-           
+            const newTodo = {
+                id: Date.now(),
+                title: action.payload.title,
+                completed: false
+            };
+            state.push(newTodo);
         },
         deleteTodo: (state, action) => {
            
